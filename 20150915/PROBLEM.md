@@ -3,13 +3,33 @@
 题干
 ----------
 多项式
-P(x) = a0+
+P(x) = a0+a1x+a2x^2+....+an-1x^n-1+anx^n = (∑那一堆)
 
-<p>
-\begin{align}\notag 
-\dot{x}&=\mathbf{A}x+\mathbf{B}u\\
-y&=\begin{bmatrix}1&0\\
-0&1\end{bmatrix}x+\begin{bmatrix}1&0\\
-0&1\end{bmatrix}u
-\end{align}
-</p>
+(a). 设多项式
+
+P(x) = b0+b1x+b2x^2+....+bn-2x^n-2 + bn-1x^n-1 = (∑那一堆)
+
+当 b0=a0,b1=a1.....bn-2=an-2时, 求用ai和x表示的bn-1
+
+(b). 用a的部分结论写一个递归的Procedure Eval(A,n,x)来求多项式P(x)的值
+
+系数在数组A[a0...an]中, 不要把n=0时候的特殊用例落下了
+
+(c). 设T(n)是你实现的Procedure Eval的运行时间
+
+给T(n)写一个递推公式并用Θ-notation的形式解出时间复杂度
+
+(d). 假设n是2的某次方
+
+把P(x)表示为P(x) = P0(x) + x^n/2P1(x)
+
+其中P0(x)和P1(x)都是n/2阶多项式. 假设计算x^n/2用时O(n)
+
+用山寨方式或者伪代码方式写一个递归Procedure Eval2用于计算P(x)
+
+可能要调用两个Eval2,写出Eval2的耗时的递推公式然后解出来.
+
+和(c)中的结果比较下发现怎样?
+
+(e). 传说中的附加题来了!!! (d)中的慢因素如何解决使得时间复杂度如预期?
+

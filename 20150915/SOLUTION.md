@@ -20,4 +20,14 @@ T(n) = Θ(f(n)) = Θ((1+(n+1))(n+1)/2)
 
 = Θ(n^2)
 
-(d). 
+(d). in C language
+
+    int Eval2(int A[], int n, double x){
+        if(0==n){
+            return A[0];
+        }else{
+            return A[n/2]*pow(x, n/2) + Eval(A, n/2-1, x);
+        }
+    }
+    
+    P(x) = Eval2(A, n/2-1, x) + Eval2(A, n/2+1, x);
